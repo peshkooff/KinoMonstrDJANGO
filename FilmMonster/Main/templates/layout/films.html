@@ -1,0 +1,53 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+
+{% endblock %}
+
+{% block selected %}
+                <ul class="menu">
+                    <li><a href="{% url 'index' %}">Главная</a></li>
+                    <li class="selected"><a href="{% url 'films' %}">Фильмы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О сайте</a></li>
+                </ul>
+{% endblock %}
+
+
+{%block content %}
+
+<div class="info_film">
+    <img src="{% static 'img/inter.png' %}">
+    Наше время на Земле подошло к концу, команда исследователей берет на себя самую важную миссию в истории человечества; путешествуя за пределами нашей галактики, чтобы узнать есть ли у человечества будущее среди звезд.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+<div class="info_film">
+    <img src="{% static 'img/max.png' %}">
+    В недалёком будущем, после крупной катастрофы, поразившей нашу урбанистическую цивилизацию, вся жизнь сосредоточилась вдоль бесчисленных магистралей.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+<div class="info_film">
+    <img src="{% static 'img/matrix.png' %}">
+    Мир Матрицы — это иллюзия, существующая только в бесконечном сне обреченного человечества.Холодный мир будущего, в котором люди — всего лишь батарейки в компьютерных системах.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+<div class="info_film">
+    <img src="{% static 'img/cloud.png' %}">
+        Шесть историй — пять реинкарнаций, происходящих в разное время, тесно переплетаются между собой…
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+
+{% endblock %}

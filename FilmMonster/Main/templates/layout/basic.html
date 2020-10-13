@@ -26,14 +26,18 @@
                 </div>
             </div>
             <div class="menu_header">
+
+                {% block selected %}
                 <ul class="menu">
-                    <li class="selected"><a href="#">Главная</a></li>
-                    <li><a href="#">Фильмы</a></li>
+                    <li class="selected"><a href="{% url 'index' %}">Главная</a></li>
+                    <li><a href="{% url 'films' %}">Фильмы</a></li>
                     <li><a href="#">Сериалы</a></li>
                     <li><a href="#">Рейтинг</a></li>
                     <li><a href="#">Контакты</a></li>
                     <li><a href="#">О сайте</a></li>
                 </ul>
+                {% endblock %}
+
             </div>
         </div>
         <div class="site_content">
@@ -125,7 +129,7 @@
                 <a href="#">Рейтинг</a> |
                 <a href="#">Контакты</a>
             </p>
-            <p>team sash c</p>
+            <p>Created peshkooff00 c</p>
         </div>
     </div>
 </body>
