@@ -2,9 +2,7 @@
 {% load static %}
 
 {% block header %}
-
 <link rel="stylesheet" href="{% static 'main/main.css' %}">
-
 {% endblock %}
 
 
@@ -14,14 +12,12 @@
     <li><a href="{% url 'films' %}">Фильмы</a></li>
     <li><a href="{% url 'serials' %}">Сериалы</a></li>
     <li><a href="{% url 'raiting' %}">Рейтинг</a></li>
-    <li><a href="#">Контакты</a></li>
+    <li><a href="{% url 'contacts' %}">Контакты</a></li>
     <li class="selected"><a href="{%url 'info' %}">О сайте</a></li>
 </ul>
 {% endblock %}
 
 {% block content %}
-
 <h2>Сайт создавался для личного портфолио</h2>
-
 <p>Directed by peshkooff00</p>
 {% endblock %}

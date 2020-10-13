@@ -1,0 +1,32 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
+
+{% block selected %}
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li><a href="{% url 'raiting' %}">Рейтинг</a></li>
+    <li class="selected"><a href="{% url 'contacts' %}">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<h2>Контакты</h2>
+<p>Отправьте ваш отзыв о портале КиноМонстр</p>
+<div class="contact_bar">
+    <form method="post" action="#" name="contact_form">
+        <input type="text" placeholder="Ваше имя" name="name_field">
+        <input type="text" placeholder="Ваш email" name="email_field">
+        <textarea name="contact_text"></textarea>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+{% endblock %}

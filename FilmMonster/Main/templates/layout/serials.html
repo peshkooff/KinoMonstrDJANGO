@@ -8,14 +8,14 @@
 {% endblock %}
 
 {% block selected %}
-                <ul class="menu">
-                    <li><a href="{% url 'index' %}">Главная</a></li>
-                    <li><a href="{% url 'films' %}">Фильмы</a></li>
-                    <li class="selected"><a href="{% url 'serials' %}">Сериалы</a></li>
-                    <li><a href="{% url 'raiting' %}">Рейтинг</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="{%url 'info' %}">О сайте</a></li>
-                </ul>
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li class="selected"><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li><a href="{% url 'raiting' %}">Рейтинг</a></li>
+    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
 {% endblock %}
 
 

@@ -19,3 +19,7 @@ def info(request):
 
 def raiting(request):
     return render(request, 'layout/raiting.html')
+
+
+def contacts(request):
+    return render(request, 'layout/contacts.html')
