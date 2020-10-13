@@ -11,3 +11,7 @@ def films(request):
 
 def serials(request):
     return render(request, 'layout/serials.html')
+
+
+def info(request):
+    return render(request, 'layout/info.html')
