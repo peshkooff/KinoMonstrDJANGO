@@ -7,3 +7,7 @@ def index(request):
 
 def films(request):
     return render(request, 'layout/films.html')
+
+
+def serials(request):
+    return render(request, 'layout/serials.html')

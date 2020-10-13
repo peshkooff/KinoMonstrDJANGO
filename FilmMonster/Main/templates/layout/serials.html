@@ -1,0 +1,54 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+
+{% endblock %}
+
+{% block selected %}
+                <ul class="menu">
+                    <li><a href="{% url 'index' %}">Главная</a></li>
+                    <li><a href="{% url 'films' %}">Фильмы</a></li>
+                    <li class="selected"><a href="{% url 'serials' %}">Сериалы</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О сайте</a></li>
+                </ul>
+{% endblock %}
+
+
+{%block content %}
+<div class="info_film">
+    <img src="{% static 'img/silicon.png' %}">
+        Американский комедийный сериал, созданный Дэйвом Крински, Джоном Альтшулером и Майком Джаджем о бизнесе в кремниевой долине. Премьера телесериала состоялась 6 апреля 2014 года на телеканале HBO.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+
+<div class="info_film">
+    <img src="{% static 'img/dead.png' %}">
+    В недалёком будущем, после крупной катастрофы, поразившей нашу урбанистическую цивилизацию, вся жизнь сосредоточилась вдоль бесчисленных магистралей.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+
+<div class="info_film">
+    <img src="{% static 'img/xfiles.png' %}">
+       Американский научно-фантастический телесериал, созданный Крисом Картером. Показ стартовал 10 сентября 1993 года и завершился 21 марта 2018 года. За это время были сняты 218 серий.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+
+<div class="info_film">
+    <img src="{% static 'img/breakingbad.png' %}">
+        Сюжет сериала «Во все тяжкие» Вся жизнь немолодого школьного учителя химии Уолтера Уайта (Брайан Крэнстон) – это борьба. Его зарплаты не хватает на содержание беременной жены и сына-инвалида, поэтому учитель вынужден подрабатывать на автомойке.
+    <div class="one_class">
+        <input type="submit" class="button_view" value="Смотреть">
+    </div>
+</div>
+{% endblock %}
