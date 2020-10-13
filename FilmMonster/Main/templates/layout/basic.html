@@ -1,10 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+{% load static %}
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Kino portal">
+    <meta name="keyword" content="film,онлайн, фильмы">
 
+    {% block header %}
+        <link rel="stylesheet" href="{% static 'main/main.css' %}">
+    {% endblock %}
+
+    <title>КиноМонстр</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="#">КиноМонстр</a></h1>
+                    <h2>Кино - наша страсть!</h2>
+                </div>
+            </div>
+            <div class="menu_header">
+                <ul class="menu">
+                    <li class="selected"><a href="#">Главная</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">О сайте</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site_content">
+            <div class="sidebar_container">
+                <div class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="Ваш запрос">
+                        <input type="submit" class="btn" value="Найти">
+                    </form>
+                </div>
+                <div class="sidebar">
+                    <h2>Вход</h2>
+                    <div>
+                        <form method="post" action="#" id="login">
+                            <input type="text" name="login_field" placeholder="логин" />
+                            <input type="password" name="password_field" placeholder="пароль" />
+                            <input type="submit" class="btn" value="Войти" />
+                            <div class="lables_passreg_text">
+                                <span><a href="#">Забыли пароль?</a> </span> | <span><a href="#">Регистрация</a> </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <h2>Новости</h2>
+                    <span>20.08.2020</span>
+                    <p>Мы запустили новый сайт</p>
+                    <a href="#">Читать</a>
+                </div>
+                <div class="sidebar">
+                    <h2>Рейтинг фильмов</h2>
+                    <ul>
+                        <li><a href="#">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="#">Крёстный отец</a><span class="rating_sidebar">9.2</span></li>
+                        <li><a href="#">Бойцовский клуб</a><span class="rating_sidebar">8.7</span></li>
+                        <li><a href="#">Омерзительная 8</a><span class="rating_sidebar">8.4</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content_center">
+                {% block content %}
+                <h1>Новые фильмы</h1>
+                <div class="films_block">
+                    <a href="#"><img src="{% static 'img/matrix.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/cloud.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/dead.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/inter.png' %}"></a>
+
+
+                </div>
+
+                <h1>Сериалы</h1>
+                <div class="films_block">
+                    <a href="#"><img src="{% static 'img/max.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/silicon.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/xfiles.png' %}"></a>
+                    <a href="#"><img src="{% static 'img/breakingbad.png' %}"></a>
+                </div>
+
+                <div class="posts">
+                    <hr>
+                    <h2><a href="#">Как создавали Интерстеллар</a></h2>
+                    <div class="post_content">
+                        <p>Фильм был задуман продюсером Линдой Обст и физиком-теоретиком Кипом Торном после сотрудничества Кипа при производстве фильма «Контакт» 1997 года. Обст и Торн были хорошо знакомы с тех пор, как астроном Карл Саган уговорил их на свидание вслепую. На основе работы Торна был задуман сценарий о том, что «самые экзотические события во Вселенной стали доступными для человечества», который привлёк интерес режиссёра Стивена Спилберга. Работа над фильмом началась в июне 2006 года, когда Paramount Pictures и Стивен Спилберг анонсировали планы по созданию научно-фантастического фильма, основанного на исследованиях Кипа Торна. Линда Обст стала продюсером фильма. В марте 2007 года Джонатан Нолан был нанят в качестве сценариста. </p>
+                    </div>
+                    <p><a href="#">Читать</a></p>
+                </div>
+
+                <div class="posts">
+                    <hr>
+                    <h2><a href="#">Сюжет Безумный Макс</a></h2>
+                    <div class="post_content">
+                        <p>В основе сюжета лежит история офицера Основного силового патруля (Main Force Patrol) Макса Рокатански. Фильм открывает большая погоня представителей MFP за бандитом-байкером по кличке Ночной Ездок, сбежавшим из-под стражи на угнанном «Перехватчике». «Перехватчики» — самые мощные машины патруля, они оснащаются восьмицилиндровыми двигателями и обладают высочайшими скоростными характеристиками. Оторвавшись от экипажей «Большого Боппера», «Мартовского зайца» и патрульного на мотоцикле по прозвищу «Гусь», Ездок остается один на один против Макса. </p>
+                    </div>
+                    <p><a href="#">Читать</a></p>
+                </div>
+
+                {% endblock %}
+
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="#">Главная</a> |
+                <a href="#">Фильмы</a> |
+                <a href="#">Сериалы</a> |
+                <a href="#">Рейтинг</a> |
+                <a href="#">Контакты</a>
+            </p>
+            <p>team sash c</p>
+        </div>
+    </div>
 </body>
 </html>
