@@ -1,0 +1,54 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
+
+{% block selected %}
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li class="selected"><a href="{% url 'raiting' %}">Рейтинг</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="center">
+<table class="rating">
+    <tr>
+        <th></th>
+        <th>Фильм</th>
+        <th>Год</th>
+        <th>Рейтинг</th>
+    </tr>
+    <tr>
+        <td><img src="{% static 'img/inter.png' %}"></td>
+        <td class="left">1. <a href="#">Интерстеллар</a> </td>
+        <td>2014</td>
+        <td>8.1</td>
+    </tr>
+    <tr>
+        <td><img src="{% static 'img/cloud.png' %}"></td>
+        <td class="left">2. <a href="#">Облачный Атлас</a> </td>
+        <td>2012</td>
+        <td>7.3</td>
+    </tr>
+    <tr>
+        <td><img src="{% static 'img/max.png' %}"></td>
+        <td class="left">3. <a href="#">Безумный Макс</a> </td>
+        <td>2013</td>
+        <td>8.0</td>
+    </tr>
+    <tr>
+        <td><img src="{% static 'img/matrix.png' %}"></td>
+        <td class="left">4. <a href="#">Матрица</a> </td>
+        <td>1999</td>
+        <td>9.2</td>
+    </tr>
+</table>
+</div>
+{% endblock %}

@@ -15,3 +15,7 @@ def serials(request):
 
 def info(request):
     return render(request, 'layout/info.html')
+
+
+def raiting(request):
+    return render(request, 'layout/raiting.html')
