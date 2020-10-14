@@ -32,7 +32,7 @@
                     <li class="selected"><a href="{% url 'index' %}">Главная</a></li>
                     <li><a href="{% url 'films' %}">Фильмы</a></li>
                     <li><a href="{% url 'serials' %}">Сериалы</a></li>
-                    <li><a href="{% url 'raiting' %}">Рейтинг</a></li>
+                    <li><a href="{% url 'rating' %}">Рейтинг</a></li>
                     <li><a href="{% url 'contacts' %}">Контакты</a></li>
                     <li><a href="{%url 'info' %}">О сайте</a></li>
                 </ul>
@@ -80,6 +80,7 @@
             </div>
 
             <div class="content_center">
+
                 {% block content %}
                 <h1>Новые фильмы</h1>
                 <div class="films_block">
@@ -88,7 +89,6 @@
                     <a href="#"><img src="{% static 'img/max.png' %}"></a>
                     <a href="#"><img src="{% static 'img/inter.png' %}"></a>
                 </div>
-
                 <h1>Сериалы</h1>
                 <div class="films_block">
                     <a href="#"><img src="{% static 'img/dead.png' %}"></a>
@@ -96,7 +96,6 @@
                     <a href="#"><img src="{% static 'img/xfiles.png' %}"></a>
                     <a href="#"><img src="{% static 'img/breakingbad.png' %}"></a>
                 </div>
-
                 <div class="posts">
                     <hr>
                     <h2><a href="#">Как создавали Интерстеллар</a></h2>
@@ -114,18 +113,17 @@
                     </div>
                     <p><a href="#">Читать</a></p>
                 </div>
-
                 {% endblock %}
 
             </div>
         </div>
         <div class="footer">
             <p>
-                <a href="#">Главная</a> |
-                <a href="#">Фильмы</a> |
-                <a href="#">Сериалы</a> |
-                <a href="#">Рейтинг</a> |
-                <a href="#">Контакты</a>
+                <a href="{% url 'index' %}">Главная</a> |
+                <a href="{% url 'films' %}">Фильмы</a> |
+                <a href="{% url 'serials' %}">Сериалы</a> |
+                <a href="{% url 'rating' %}">Рейтинг</a> |
+                <a href="{% url 'contacts' %}">Контакты</a>
             </p>
             <p>Created peshkooff00</p>
         </div>

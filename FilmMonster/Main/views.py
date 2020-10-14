@@ -17,8 +17,8 @@ def info(request):
     return render(request, 'layout/info.html')
 
 
-def raiting(request):
-    return render(request, 'layout/raiting.html')
+def rating(request):
+    return render(request, 'layout/rating.html')
 
 
 def contacts(request):
