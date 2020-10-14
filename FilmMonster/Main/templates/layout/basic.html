@@ -21,7 +21,7 @@
         <div class="header">
             <div class="logo">
                 <div class="logo_text">
-                    <h1><a href="#">КиноМонстр</a></h1>
+                    <h1><a href="{% url 'index' %}">КиноМонстр</a></h1>
                     <h2>Кино - наша страсть!</h2>
                 </div>
             </div>
@@ -49,19 +49,25 @@
                         <input type="submit" class="btn" value="Найти">
                     </form>
                 </div>
+
                 <div class="sidebar">
-                    <h2>Вход</h2>
+                    {% if user.is_authenticated %}
+                    <h2>Профиль</h2>
+                    <p>peshkooff00</p>
+                    <span><a href="#">Изменить?</a></span> |
+                    <span><a href="#">Выйти?</a></span>
+                    {% else %}
                     <div>
-                        <form method="post" action="#" id="login">
-                            <input type="text" name="login_field" placeholder="логин" />
-                            <input type="password" name="password_field" placeholder="пароль" />
-                            <input type="submit" class="btn" value="Войти" />
-                            <div class="lables_passreg_text">
-                                <span><a href="#">Забыли пароль?</a> </span> | <span><a href="#">Регистрация</a> </span>
-                            </div>
+                        <h2>Вход</h2>
+                        <form action="." method="post">
+                        {{form.as_p}}
+                        {% csrf_token %}
+                        <input type="submit" class="btn" value="Войти">
                         </form>
                     </div>
+                    {% endif %}
                 </div>
+
                 <div class="sidebar">
                     <h2>Новости</h2>
                     <span>20.08.2020</span>

@@ -35,7 +35,7 @@ hr {
 
 a, a:hover {
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
     color: #aeb002;
 }
 
@@ -98,6 +98,10 @@ input, textarea {
     color: #999;
 }
 
+.menu {
+    width: 100%;
+}
+
 .menu_header {
     width: 900px;
     height: 46px;
@@ -142,6 +146,7 @@ ul.menu li a:hover {
     float: right;
     width: 224px;
 }
+
 
 .sidebar {
     float: right;
