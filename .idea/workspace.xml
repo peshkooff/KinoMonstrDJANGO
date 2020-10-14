@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="917d93df-491e-48b2-a88f-c2e33970c47d" name="Default Changelist" comment="" />
+    <list default="true" id="917d93df-491e-48b2-a88f-c2e33970c47d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/main.data" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/main.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +16,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="0f691a26-91aa-4c4b-9a8f-9ab22dea8783" />
   <component name="ProjectId" id="1ipFMLNVABBshKDMqFMWT1VMgjW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,9 +36,11 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/HTML/App1/htmlcourse/browser/templates/browser/index.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -62,7 +74,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602596577674</updated>
-      <workItem from="1602596583759" duration="8467000" />
+      <workItem from="1602596583759" duration="9833000" />
+      <workItem from="1602667676898" duration="15398000" />
     </task>
     <servers />
   </component>
@@ -74,5 +87,9 @@
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
     <state x="695" y="219" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1602602089262" />
+    <state x="564" y="131" key="SettingsEditor" timestamp="1602667950166">
+      <screen x="0" y="0" width="1920" height="1035" />
+    </state>
+    <state x="564" y="131" key="SettingsEditor/0.0.1920.1035@0.0.1920.1035" timestamp="1602667950166" />
   </component>
 </project>
