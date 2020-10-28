@@ -45,3 +45,7 @@ def contacts(request):
 
 def film_content(request):
     return render(request, 'layout/film_content.html')
+
+
+def serial_content(request):
+    return render(request, 'layout/serial_content.html')

@@ -45,10 +45,10 @@
 </div>
 
 <div class="info_film">
-    <img src="{% static 'img/breakingbad.png' %}">
+    <a href="{% url 'serial_content' %}"><img src="{% static 'img/breakingbad.png' %}"></a>
         Сюжет сериала «Во все тяжкие» Вся жизнь немолодого школьного учителя химии Уолтера Уайта (Брайан Крэнстон) – это борьба. Его зарплаты не хватает на содержание беременной жены и сына-инвалида, поэтому учитель вынужден подрабатывать на автомойке.
     <div class="one_class">
-        <input type="submit" class="button_view" value="Смотреть">
+        <a href="{% url 'serial_content' %}"><input type="submit" class="button_view" value="Смотреть"></a>
     </div>
 </div>
 {% endblock %}

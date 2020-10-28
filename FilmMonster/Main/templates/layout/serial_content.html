@@ -1,0 +1,50 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
+
+{% block selected %}
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li><a href="{% url 'rating' %}">Рейтинг</a></li>
+    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+<hr>
+
+<h2>Описание сериала</h2>
+
+<hr>
+
+<h2>Отзывы об сериале</h2>
+<div class="reviews">
+    <div class="review_name">
+        Сергей
+    </div>
+    <div class="review_text">
+        Отличный фильм, 3 часа пролетели незаметно
+    </div>
+    <div class="review_name">
+        Дмитрий
+    </div>
+    <div class="review_text">
+        После фильма Начало , я с нетерпением ждал ещё одной работы от Кристофера Нолена. Интерстеллар меня впечатлил
+    </div>
+</div>
+<div class="send">
+    <form method="post" action="#" id="review">
+        <input type="text" placeholder="Ваше имя" name="review_name">
+        <textarea name="review_text"></textarea>
+        <br>
+        <input type="submit" class="btn" value="Отправить">
+    </form>
+</div>
+{% endblock %}

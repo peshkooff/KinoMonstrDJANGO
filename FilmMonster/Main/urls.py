@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, films, serials, info, rating, contacts, film_content
+from .views import index, films, serials, info, rating, contacts, film_content, serial_content
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path('rating/', rating, name='rating'),
     path('contacts/', contacts, name='contacts'),
     path('films/film_content', film_content, name='film_content'),
+    path('serials/serial_content', serial_content, name='serial_content'),
 ]
