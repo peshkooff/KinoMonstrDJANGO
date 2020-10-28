@@ -420,3 +420,6 @@ td img {
     padding: 0 0 5px 0;
 }
 
+.info_film__image,.info_film__text{
+    display: inline-block;
+}
