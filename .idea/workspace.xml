@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="917d93df-491e-48b2-a88f-c2e33970c47d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmMonster/main.data" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/main.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilmMonster/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilmMonster/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/HTML/App1/htmlcourse/browser/templates/browser/index.html" />
+    <property name="last_opened_file_path" value="$USER_HOME$/KNU/Yanina/PythonProject1" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
@@ -75,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602596577674</updated>
       <workItem from="1602596583759" duration="9833000" />
-      <workItem from="1602667676898" duration="15398000" />
+      <workItem from="1602667676898" duration="15867000" />
+      <workItem from="1602757685325" duration="103000" />
     </task>
     <servers />
   </component>
@@ -83,10 +81,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="219" key="FileChooserDialogImpl" timestamp="1602602089262">
+    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl" timestamp="1602757786941">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="695" y="219" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1602602089262" />
+    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1602757786941" />
     <state x="564" y="131" key="SettingsEditor" timestamp="1602667950166">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>

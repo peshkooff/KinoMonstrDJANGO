@@ -1,0 +1,63 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
+
+{% block selected %}
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li><a href="{% url 'rating' %}">Рейтинг</a></li>
+    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2 color="white">Интерстеллар</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N0mAYAGBy_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="info_film_page">
+    <span class="label">Рейтинг:</span>
+    <span class="value">8.1 / 10</span> |
+    <span class="label">Год:</span>
+    <span class="value">2013</span> |
+    <span class="label">Режиссёр:</span>
+    <span class="value">Кристофер Нолан</span>
+</div>
+
+<hr>
+
+<h2>Описание Интерстеллар</h2>
+<div class="description_film">
+    <img src="{% static 'img/inter.png' %}">
+    Наше время на Земле подошло к концу, команда исследователей берет на себя самую важную миссию в истории человечества; путешествуя за пределами нашей галактики, чтобы узнать есть ли у человечества будущее среди звезд.
+</div>
+<hr>
+
+<h2>Отзывы об Интерстеллар</h2>
+<div class="reviews">
+    <div class="review_name">
+        Сергей
+    </div>
+    <div class="review_text">
+        Отличный фильм, 3 часа пролетели незаметно
+    </div>
+    <div class="review_name">
+        Дмитрий
+    </div>
+    <div class="review_text">
+        После фильма Начало , я с нетерпением ждал ещё одной работы от Кристофера Нолена. Интерстеллар меня впечатлил
+    </div>
+</div>
+<div class="send">
+    <form method="post" action="#" id="review">
+        <input type="text" placeholder="Ваше имя" name="review_name">
+        <textarea name="review_text"></textarea>
+        <br>
+        <input type="submit" class="btn" value="Отправить">
+    </form>
+</div>
+{% endblock %}

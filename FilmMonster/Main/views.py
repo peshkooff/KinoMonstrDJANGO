@@ -41,3 +41,7 @@ def rating(request):
 
 def contacts(request):
     return render(request, 'layout/contacts.html')
+
+
+def film_content(request):
+    return render(request, 'layout/film_content.html')
