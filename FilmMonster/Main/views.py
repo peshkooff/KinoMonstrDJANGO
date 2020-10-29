@@ -1,7 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 from django.http import HttpResponse
+from django.views.generic.edit import UpdateView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from .models import AdvUser
+from .forms import ChangeUserInfo
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+class ChangeUserInfoView(SuccessMessageMixin, UpdateView, LoginRequiredMixin):
+    model = AdvUser
+    template_name = 'layout/change_user_info.html'
+    form_class = ChangeUserInfo
+    success_url = reverse_lazy('profile')
+    success_message = 'Личные данные успешно изменены'
+
+    def dispatch(self, request, *args, **kwargs):
+        self.user_id = request.user.pk
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        if not queryset:
+            queryset = self.get_queryset()
+        return get_object_or_404(queryset, pk=self.user_id)
 
 
 def index(request):

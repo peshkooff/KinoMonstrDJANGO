@@ -53,8 +53,8 @@
                 <div class="sidebar">
                     {% if user.is_authenticated %}
                     <h2>Профиль</h2>
-                    <p><a href="{% url 'profile' %}">peshkooff00</a></p>
-                    <span><a href="#">Изменить?</a></span> |
+                    <p><a href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <span><a href="{% url 'profile_change' %}">Изменить?</a></span> |
                     <span><a href="{% url 'logout' %}?next=/">Выйти?</a></span>
                     {% else %}
                     <div>

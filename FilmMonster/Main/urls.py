@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, films, serials, info, rating, contacts, film_content, serial_content
+from .views import index, films, serials, info, rating, contacts, film_content, serial_content, ChangeUserInfoView
 
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     path('contacts/', contacts, name='contacts'),
     path('films/film_content', film_content, name='film_content'),
     path('serials/serial_content', serial_content, name='serial_content'),
+    path('accounts/profile/change/', ChangeUserInfoView.as_view(), name='profile_change'),
 ]
