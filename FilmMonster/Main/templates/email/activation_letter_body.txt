@@ -1,0 +1,3 @@
+Hello user {{ user.username }}
+You've registrated on site KinoMonstr.
+Please press the link.

@@ -1,14 +1,42 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import PasswordChangeView
-from .forms import LoginForm
+from .forms import RegisterForm, LoginForm
 from django.http import HttpResponse
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, CreateView
+from django.views.generic.base import TemplateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from .models import AdvUser
 from .forms import ChangeUserInfo
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .utilities import signer
+from django.core.signing import BadSignature
+
+
+def user_activate(request, sign):
+    try:
+        username = signer.unsign(sign)
+    except BadSignature:
+        return render(request, 'layout/bad_signature.html')
+    user = get_object_or_404(AdvUser, username=username)
+    if user.is_actived:
+        template = 'layout/activation_done.html'
+        user.is_active = True
+        user.is_actived = True
+        user.save()
+    return render(request, template)
+
+
+class RegisterUserDoneView(TemplateView):
+    template_name = 'layout/register_done.html'
+
+
+class RegisterUserView(CreateView):
+    model = AdvUser
+    template_name = 'layout/register_user.html'
+    form_class = RegisterForm
+    success_url = reverse_lazy('profile')
 
 
 class ChangeUserInfoView(SuccessMessageMixin, UpdateView, LoginRequiredMixin):
