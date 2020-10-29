@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import PasswordChangeView
 from .forms import LoginForm
 from django.http import HttpResponse
 from django.views.generic.edit import UpdateView
@@ -25,6 +26,12 @@ class ChangeUserInfoView(SuccessMessageMixin, UpdateView, LoginRequiredMixin):
         if not queryset:
             queryset = self.get_queryset()
         return get_object_or_404(queryset, pk=self.user_id)
+
+
+class FPasswordChangeView(SuccessMessageMixin, LoginRequiredMixin, PasswordChangeView):
+    template_name = 'layout/password_change.html'
+    success_url = reverse_lazy('profile')
+    success_message = 'Пароль успешно изменён!'
 
 
 def index(request):
