@@ -9,9 +9,21 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from .models import AdvUser
 from .forms import ChangeUserInfo
-from django.contrib.auth.mixins import LoginRequiredMixin
 from .utilities import signer
 from django.core.signing import BadSignature
+from django.contrib.auth.views import LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from .models import Movie, Serial
+
+
+@login_required
+def profile(request):
+    return render(request, 'layout/profile.html')
+
+
+class KLogoutView(LoginRequiredMixin, LogoutView):
+    template_name = 'layout/basic.html'
 
 
 def user_activate(request, sign):
@@ -63,6 +75,8 @@ class FPasswordChangeView(SuccessMessageMixin, LoginRequiredMixin, PasswordChang
 
 
 def index(request):
+    films = Movie.objects.all()
+    serials = Serial.objects.all()
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -78,15 +92,20 @@ def index(request):
                 return HttpResponse('Invalid login')
     else:
         form = LoginForm()
-    return render(request, 'layout/basic.html', {'form': form})
+    context = {'films': films, 'serials': serials, 'form': form}
+    return render(request, 'layout/basic.html', context)
 
 
 def films(request):
-    return render(request, 'layout/films.html')
+    all_films = Movie.objects.all()
+    context = {'all_films': all_films}
+    return render(request, 'layout/films.html', context)
 
 
 def serials(request):
-    return render(request, 'layout/serials.html')
+    all_serials = Serial.objects.all()
+    context = {'all_serials': all_serials}
+    return render(request, 'layout/serials.html', context)
 
 
 def info(request):
@@ -101,9 +120,14 @@ def contacts(request):
     return render(request, 'layout/contacts.html')
 
 
-def film_content(request):
-    return render(request, 'layout/film_content.html')
+def film_content(request, film_title):
+    current_film = Movie.objects.get(title=film_title)
+    context = {'current_film': current_film}
+    return render(request, 'layout/film_content.html', context)
 
 
-def serial_content(request):
-    return render(request, 'layout/serial_content.html')
+def serial_content(request, serial_title):
+    current_serial = Serial.objects.get(title=serial_title)
+    context = {'current_serial': current_serial}
+    return render(request, 'layout/serial_content.html', context)
+

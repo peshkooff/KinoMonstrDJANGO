@@ -1,6 +1,10 @@
 {% extends 'layout/basic.html' %}
 {% load static %}
 
+{% block title %}
+<title>Профиль</title>
+{% endblock %}
+
 {% block selected %}
 <ul class="menu">
     <li><a href="{% url 'index' %}">Главная</a></li>

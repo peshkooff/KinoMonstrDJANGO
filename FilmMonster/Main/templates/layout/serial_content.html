@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'main/main.css' %}">
 {% endblock %}
 
+{% block title %}
+<title>{{сurrent_serial.name}}</title>
+{% endblock %}
+
 {% block selected %}
 <ul class="menu">
     <li><a href="{% url 'index' %}">Главная</a></li>
@@ -17,14 +21,25 @@
 {% endblock %}
 
 {% block content %}
-
+<h2 color="white">{{current_serial.name}}</h2>
+<iframe width="560" height="315" src="{{current_serial.movie_trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="info_film_page">
+    <span class="label">Рейтинг:</span>
+    <span class="value">8.1 / 10</span> |
+    <span class="label">Год:</span>
+    <span class="value">{{current_serial.year_of_production|date:"Y"}}</span> |
+    <span class="label">Режиссёр:</span>
+    <span class="value">{{current_serial.producer}}</span>
+</div>
+<hr>
+<h2>Описание {{current_serial.name}}</h2>
+<div class="description_film">
+    <img src="/static/{{current_serial.image}}">
+    {{current_serial.description}}
+</div>
 <hr>
 
-<h2>Описание сериала</h2>
-
-<hr>
-
-<h2>Отзывы об сериале</h2>
+<h2>Отзывы об {{current_serial.name}}</h2>
 <div class="reviews">
     <div class="review_name">
         Сергей

@@ -4,6 +4,7 @@ from django.contrib.auth import password_validation
 from django.core.exceptions import ValidationError
 from .models import user_registrated
 
+
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)

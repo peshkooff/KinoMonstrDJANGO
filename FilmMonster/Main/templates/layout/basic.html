@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="{% static 'main/main.css' %}">
     {% endblock %}
 
+    {% block title %}
     <title>КиноМонстр</title>
+    {% endblock %}
 </head>
 
 <body>
@@ -64,6 +66,7 @@
                         {% csrf_token %}
                         <input type="submit" class="btn" value="Войти">
                         </form>
+                        <br>
                         <span><a href="{% url 'register' %}">Зарегистрироваться?</a></span>
                     </div>
                     {% endif %}
@@ -92,17 +95,16 @@
                 {% block content %}
                 <h1>Новые фильмы</h1>
                 <div class="films_block">
-                    <a href="#"><img src="{% static 'img/matrix.png' %}"></a>
-                    <a href="#"><img src="{% static 'img/cloud.png' %}"></a>
-                    <a href="#"><img src="{% static 'img/max.png' %}"></a>
-                    <a href="{% url 'film_content' %}"><img src="{% static 'img/inter.png' %}"></a>
+                    {% for film in films %}
+                    <a href="{% url 'film_content' film.title %}"><img src="/static/{{film.image}}"></a>
+                    {% endfor %}
                 </div>
+
                 <h1>Сериалы</h1>
                 <div class="films_block">
-                    <a href="#"><img src="{% static 'img/dead.png' %}"></a>
-                    <a href="#"><img src="{% static 'img/silicon.png' %}"></a>
-                    <a href="#"><img src="{% static 'img/xfiles.png' %}"></a>
-                    <a href="{% url 'serial_content' %}"><img src="{% static 'img/breakingbad.png' %}"></a>
+                    {% for serial in serials %}
+                    <a href="{% url 'serial_content' serial.title %}"><img src="/static/{{serial.image}}"></a>
+                    {% endfor %}
                 </div>
                 <div class="posts">
                     <hr>

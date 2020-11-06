@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'main/main.css' %}">
 {% endblock %}
 
+{% block title %}
+<title>{{current_film.name}}</title>
+{% endblock %}
+
 {% block selected %}
 <ul class="menu">
     <li><a href="{% url 'index' %}">Главная</a></li>
@@ -17,27 +21,27 @@
 {% endblock %}
 
 {% block content %}
-<h2 color="white">Интерстеллар</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N0mAYAGBy_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 color="white">{{current_film.name}}</h2>
+<iframe width="560" height="315" src="{{current_film.movie_trailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <div class="info_film_page">
     <span class="label">Рейтинг:</span>
     <span class="value">8.1 / 10</span> |
     <span class="label">Год:</span>
-    <span class="value">2013</span> |
+    <span class="value">{{current_film.year_of_production|date:"Y"}}</span> |
     <span class="label">Режиссёр:</span>
-    <span class="value">Кристофер Нолан</span>
+    <span class="value">{{current_film.producer}}</span>
 </div>
 
 <hr>
 
-<h2>Описание Интерстеллар</h2>
+<h2>Описание {{current_film.name}}</h2>
 <div class="description_film">
-    <img src="{% static 'img/inter.png' %}">
-    Наше время на Земле подошло к концу, команда исследователей берет на себя самую важную миссию в истории человечества; путешествуя за пределами нашей галактики, чтобы узнать есть ли у человечества будущее среди звезд.
+    <img src="/static/{{current_film.image}}">
+    {{current_film.description}}
 </div>
 <hr>
 
-<h2>Отзывы об Интерстеллар</h2>
+<h2>Отзывы об {{current_film.name}}</h2>
 <div class="reviews">
     <div class="review_name">
         Сергей

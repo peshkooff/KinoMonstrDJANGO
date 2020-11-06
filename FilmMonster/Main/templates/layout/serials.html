@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block header %}
-
 <link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
 
+{% block title %}
+<title>Сериалы</title>
 {% endblock %}
 
 {% block selected %}
@@ -20,35 +22,13 @@
 
 
 {%block content %}
+{% for serial in all_serials %}
 <div class="info_film">
-    <img src="{% static 'img/silicon.png' %}">
-        Американский комедийный сериал, созданный Дэйвом Крински, Джоном Альтшулером и Майком Джаджем о бизнесе в кремниевой долине. Премьера телесериала состоялась 6 апреля 2014 года на телеканале HBO.
-    <div class="one_class">
-        <input type="submit" class="button_view" value="Смотреть">
+    <img src="/static/{{serial.image}}">
+            {{serial.description}}
+        <div class="one_class">
+        <a href="{% url 'serial_content' serial.title %}"><input type="submit" class="button_view" value="Смотреть"></a>
+        </div>
     </div>
-</div>
-
-<div class="info_film">
-    <img src="{% static 'img/dead.png' %}">
-    В недалёком будущем, после крупной катастрофы, поразившей нашу урбанистическую цивилизацию, вся жизнь сосредоточилась вдоль бесчисленных магистралей.
-    <div class="one_class">
-        <input type="submit" class="button_view" value="Смотреть">
-    </div>
-</div>
-
-<div class="info_film">
-    <img src="{% static 'img/xfiles.png' %}">
-       Американский научно-фантастический телесериал, созданный Крисом Картером. Показ стартовал 10 сентября 1993 года и завершился 21 марта 2018 года. За это время были сняты 218 серий.
-    <div class="one_class">
-        <input type="submit" class="button_view" value="Смотреть">
-    </div>
-</div>
-
-<div class="info_film">
-    <a href="{% url 'serial_content' %}"><img src="{% static 'img/breakingbad.png' %}"></a>
-        Сюжет сериала «Во все тяжкие» Вся жизнь немолодого школьного учителя химии Уолтера Уайта (Брайан Крэнстон) – это борьба. Его зарплаты не хватает на содержание беременной жены и сына-инвалида, поэтому учитель вынужден подрабатывать на автомойке.
-    <div class="one_class">
-        <a href="{% url 'serial_content' %}"><input type="submit" class="button_view" value="Смотреть"></a>
-    </div>
-</div>
+{% endfor %}
 {% endblock %}
