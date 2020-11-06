@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="917d93df-491e-48b2-a88f-c2e33970c47d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/FilmMonster/FilmMonster/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/FilmMonster/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/FilmMonster/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/FilmMonster/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmMonster/Main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmMonster/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/change_user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/change_user_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/film_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/film_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/Main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmMonster/Main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/main.data" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/main.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/FilmMonster/Main/templates/layout/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmMonster/users/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CodeWarsStrickChallenge" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
@@ -76,6 +93,7 @@
       <workItem from="1602667676898" duration="15867000" />
       <workItem from="1602757685325" duration="103000" />
       <workItem from="1603986150473" duration="249000" />
+      <workItem from="1604597210930" duration="3784000" />
     </task>
     <servers />
   </component>
@@ -83,10 +101,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl" timestamp="1602757786941">
+    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl" timestamp="1604604041222">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1602757786941" />
+    <state x="695" y="219" width="530" height="597" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1604604041222" />
     <state x="564" y="131" key="SettingsEditor" timestamp="1602667950166">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
