@@ -1,0 +1,33 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'main/main.css' %}">
+{% endblock %}
+
+{% block title %}
+<title>Поиск</title>
+{% endblock %}
+
+{% block selected %}
+<ul class="menu">
+    <li><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'films' %}">Фильмы</a></li>
+    <li><a href="{% url 'serials' %}">Сериалы</a></li>
+    <li><a href="{% url 'rating' %}">Рейтинг</a></li>
+    <li><a href="{% url 'contacts' %}">Контакты</a></li>
+    <li><a href="{%url 'info' %}">О сайте</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2>Поиск</h2>
+<form method="get" action="{% url 'search' %}" id="search_form">
+    <input type="search" name="search_field" placeholder="Ваш запрос">
+</form>
+{% for s in object_list %}
+    <br>
+    <img src="/static/{{s.image}}">
+    <a href="{% url 'film_content' s.title %}"><p>{{ s.name }}</p></a>
+{% endfor %}
+{% endblock %}

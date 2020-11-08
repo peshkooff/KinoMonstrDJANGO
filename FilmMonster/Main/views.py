@@ -15,7 +15,7 @@ from django.contrib.auth.views import LogoutView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .models import Movie, Serial
-
+from django.db.models import Q
 
 @login_required
 def profile(request):
@@ -131,3 +131,9 @@ def serial_content(request, serial_title):
     context = {'current_serial': current_serial}
     return render(request, 'layout/serial_content.html', context)
 
+
+def search(request):
+    query = request.GET.get('search_field')
+    object_list = Movie.objects.filter(Q(name=query))
+    context = {'object_list': object_list}
+    return render(request, 'layout/search.html', context=context)

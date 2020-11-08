@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import index, films, serials, info, rating, contacts, film_content, serial_content, ChangeUserInfoView
 from .views import FPasswordChangeView, RegisterUserDoneView, RegisterUserView, user_activate, profile, KLogoutView
-
+from .views import search
 urlpatterns = [
     path('', index, name='index'),
     path('films/', films, name='films'),
@@ -18,4 +18,5 @@ urlpatterns = [
     path('accounts/register/activate/<str:sign>/', user_activate, name='register_activate'),
     path('profile/', profile, name='profile'),
     path('logout/', KLogoutView.as_view(), name='logout'),
+    path('search/', search, name='search'),
 ]

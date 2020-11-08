@@ -46,9 +46,8 @@
             <div class="sidebar_container">
                 <div class="sidebar">
                     <h2>Поиск</h2>
-                    <form method="post" action="#" id="search_form">
-                        <input type="search" name="search_field" placeholder="Ваш запрос">
-                        <input type="submit" class="btn" value="Найти">
+                    <form method="post" action="{% url 'index' %}" id="search_form">
+                        <a href="{% url 'search' %}">Поисковая строка</a>
                     </form>
                 </div>
                 {% block login %}
